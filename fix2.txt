@@ -1,0 +1,40 @@
+mkdir git-tisdag
+cd git-tisdag
+git init
+touch README.md
+vi README.md
+git add README.md
+git commit -m "initial commit"
+git branch feature1
+git switch feature1
+vi README.md
+git commit -a -m "add animal"
+git switch main
+vi README.md
+git commit -a -m "change animal"
+git merge feature1
+vi README.md
+git commit -a -m "solved conflicts"
+git tag extinct
+git reset HEAD ~1
+git status
+git commit -a -m "reset"
+git branch feature2
+vi README.md
+git commit -a -m "capital"
+git switch feature2
+git touch fix1.txt
+git add .
+git commit -m "fix1"
+git touch fix2.txt
+git add .
+git commit -m "fix2"
+git switch main
+ls
+git switch feature2
+git log --oneline
+git switch main
+git cherry-pick 187584d
+vi fix2.txt
+git remote add origin https://github.com/JuliaHLonn/Git-test.git
+git push -u origin main
